@@ -1,0 +1,66 @@
+#section-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#card-login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    padding: 20px;
+    height: 200px;
+    width: 200px;
+    color: rgb(196, 196, 196);
+    border-radius: 10px;
+    background-color: #292929;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+                rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    gap: 10px;
+}
+
+#senha{
+    width: 150px;
+    padding: 5px;
+    margin: 5px auto;
+    border: 1px solid #292929;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+
+#botaoLogin{
+    width: 70px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00ffb7;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s
+}
+
+#logout{
+    width: 70px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00ffb7;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s
+}
+
+
+ #logout:hover, #botaoLogin:hover {
+    background-color: #005a40;
+}
