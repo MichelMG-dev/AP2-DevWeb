@@ -1,7 +1,8 @@
-body{
+body {
     background-color: #454545;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 .container {
     display: grid;
     justify-content: center;
@@ -9,49 +10,33 @@ body{
     place-items: center;
 }
 
-
-/*Botoes*/
-#divBotoes{
+#divBotoes {
     display: flex;
     align-items: center;
     justify-content: center;
     max-width: 1400px;
 }
 
-.botao-selecao {
+.botao-selecao button {
     display: grid;
     align-items: center;
     justify-content: center;
     margin: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-/* Dropdown */
-.dropdown {
-    width: 95%; 
-    padding: 10px;
-    border: 1px solid #6e6e6e;
-    border-radius: 5px;
-    font-size: 14px;
-    margin-bottom: 10px;
-    color: white;
-    background-color: #292929;
-
-}
-
-/* Barra de Busca */
-#busca {
+.dropdown, #busca {
     width: 95%;
     padding: 10px;
-    margin: 0 auto;
     border: 1px solid #6e6e6e;
     border-radius: 5px;
     font-size: 14px;
     margin-bottom: 10px;
     color: white;
     background-color: #292929;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-/* Botoes mudar time*/
 #teamSelection {
     display: flex;
     align-items: center;
@@ -76,7 +61,6 @@ body{
     background-color: #005a40;
 }
 
-/*Container Principal*/
 #container {
     display: grid;
     gap: 10px;
@@ -85,7 +69,6 @@ body{
     max-width: 1400px;
 }
 
-/*Card*/
 article {
     background-color: rgb(60, 60, 60);
     text-align: center;
@@ -97,24 +80,17 @@ article {
                 rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
-
-
-/*Imagem Card*/
 img {
     max-width: 270px;
     border-radius: 10px;
     margin: 20px 5px;
     margin-top: 0px;
-
 }
 
 article:hover {
     transform: scale(1.01);
 }
 
-
-
-/*Titulo Card*/
 h1 {
     display: flex;
     color: #dbdbdb;
@@ -125,9 +101,6 @@ h1 {
     font-size: 15px;
 }
 
-
-
-/*Media Queries */
 @media (max-width: 768px) {
     #container {
         grid-template-columns: repeat(1, 1fr);
@@ -135,13 +108,9 @@ h1 {
     article {
         width: 300px;
     }
-    .dropdown {
+    .dropdown, #busca {
         width: 104%;
         padding: 5px;
-    }
-    #busca {
-        width: 101%;
-        padding: 8px;
     }
 }
 
@@ -149,14 +118,10 @@ h1 {
     #container {
         grid-template-columns: repeat(3, 1fr);
     }
-
     article {
         width: 300px;
     }
-    .dropdown {
-        width: 95%;
-    }
-    #busca {
+    .dropdown, #busca {
         width: 95%;
     }
 }
@@ -168,10 +133,7 @@ h1 {
     article {
         width: 300px;
     }
-    .dropdown {
-        width: 95%;
-    }
-    #busca {
+    .dropdown, #busca {
         width: 95%;
     }
 }
@@ -183,14 +145,10 @@ h1 {
     article {
         width: 236px;
     }
-
-    img{
+    img {
         width: 216px;
     }
-    .dropdown {
-        width: 95%;
-    }
-    #busca {
+    .dropdown, #busca {
         width: 95%;
     }
 }

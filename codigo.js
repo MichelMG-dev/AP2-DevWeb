@@ -1,7 +1,5 @@
 const url = "https://botafogo-atletas.mange.li/2024-1/";
-
 const idLimite = 60;
-
 sessionStorage.setItem('idLimite', idLimite);
 
 const container = document.getElementById("container");
@@ -9,24 +7,20 @@ const divBotoes = document.getElementById("divBotoes");
 
 const manipulaCLick = (e) => {
     const id = e.currentTarget.dataset.id;
-
     const url = `detalhes.html?id=${id}`;
 
     document.cookie = `id=${id}`;
     document.cookie = `nJogos=${e.currentTarget.dataset.nJogos}`;
 
+    const dados = JSON.stringify(e.currentTarget.dataset);
     localStorage.setItem('id', id);
-    localStorage.setItem('dados', JSON.stringify(e.currentTarget.dataset));
-
+    localStorage.setItem('dados', dados);
     sessionStorage.setItem('id', id);
-
-    sessionStorage.setItem('dados', JSON.stringify(e.currentTarget.dataset));
+    sessionStorage.setItem('dados', dados);
 
     window.location.href = url;
-
     console.log(e.currentTarget);
 }
-
 
 const pega_json = async (caminho) => {
     const resposta = await fetch(caminho);
@@ -39,9 +33,8 @@ const montaCard = (atleta) => {
     const nome = document.createElement("h1");
     const imagem = document.createElement("img");
 
-
     nome.innerText = atleta.nome;
-    nome.style.fontFamily= "font-family: Verdana, Geneva, Tahoma, sans-serif";
+    nome.style.fontFamily = "Verdana, Geneva, Tahoma, sans-serif";
     cartao.appendChild(nome);
 
     imagem.src = atleta.imagem;
@@ -55,43 +48,23 @@ const montaCard = (atleta) => {
     return cartao;
 }
 
+const carregaAtletas = (endpoint) => {
+    pega_json(`${url}${endpoint}`).then(
+        (r) => {
+            container.innerHTML = "";
+            r.forEach(
+                (ele) => container.appendChild(montaCard(ele))
+            )
+        }
+    );
+}
 
 //BOTOES
-const botaoMasc = () => {
-    pega_json(`${url}masculino`).then(
-        (r) => {
-            container.innerHTML = "";
-            r.forEach(
-                (ele) => container.appendChild(montaCard(ele))
-            )
-        }
-    );
-}
-
-const botaoFem = () => {
-    pega_json(`${url}feminino`).then(
-        (r) => {
-            container.innerHTML = "";
-            r.forEach(
-                (ele) => container.appendChild(montaCard(ele))
-            )
-        }
-    );
-}
-
-const botaoAll = () => {
-    pega_json(`${url}all`).then(
-        (r) => {
-            container.innerHTML = "";
-            r.forEach(
-                (ele) => container.appendChild(montaCard(ele))
-            )
-        }
-    );
-}
+const botaoMasc = () => carregaAtletas('masculino');
+const botaoFem = () => carregaAtletas('feminino');
+const botaoAll = () => carregaAtletas('all');
 
 // LOGIN
-
 const criaBotoesTimes = () => {
     const botoes = document.createElement("div");
     botoes.id = "botoes";
@@ -105,14 +78,13 @@ const criaBotoesTimes = () => {
         <input type="text" id="busca" placeholder="Insira Busca">
     </div>
     `;
-
     return botoes;
 }
 
 const criaSelectTimes = () => {
     const select = document.createElement("select");
     select.id = "teamSelection";
-    select.className = "dropdown"; // Add this line
+    select.className = "dropdown";
     select.innerHTML = `
         <option value="masculino">Time Masculino</option>
         <option value="feminino">Time Feminino</option>
@@ -166,7 +138,6 @@ const loginValido = () => {
 
 const manipulaBotaoLogin = () => {
     const texto = document.getElementById("senha").value;
-
     document.getElementById("senha").value = "";
 
     if (hex_sha256(texto) === "8ff576f9c1f4130066da185a946c4d6a7438b2bf1715fa6c28ab1b514bf41aa1") {

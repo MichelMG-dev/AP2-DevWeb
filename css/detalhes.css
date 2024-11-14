@@ -5,14 +5,11 @@ body {
 
 }
 
-/*Titulo*/
 .nome-content {
     margin: 20px;
     max-width: 1000px;
 }
 
-
-/*Container Principal*/
 .card {
     display: flex;
     flex-direction: column;
@@ -25,9 +22,6 @@ body {
     background-color: #292929;
 }
 
-
-
-/*Container de informacoes*/
 .info-container {
     display: flex;
     align-items: flex-start;
@@ -35,7 +29,6 @@ body {
     margin-bottom: 10px;
 }
 
-/*Imagem do atleta*/
 .imagem {
     max-width: 50%;
     height: 600px;
@@ -44,7 +37,6 @@ body {
     border-radius: 8px;
 }
 
-/*Descricao do atleta*/
 .content-descricao {
     margin: 20px;
     width: 50%;
@@ -55,22 +47,17 @@ body {
 
 
 
-/*Container de estatisticas*/
 .stats-container {
     width: 100%;
     max-width: 960px;
 }
 
-/*Estatisticas*/
 .stats{
     display: flex;
     flex-direction: column;
     font-size: 1.4em;
 }
 
-
-
-/*Botao de voltar*/
 .botao-voltar {
     background-color: #00ffb7;
     color: rgb(0, 0, 0);
@@ -90,7 +77,6 @@ body {
 }
 
 
-/* Media Queries */
 
 @media (max-width: 768px) {
 
