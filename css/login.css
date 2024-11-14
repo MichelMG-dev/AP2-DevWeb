@@ -27,10 +27,12 @@
 }
 
 #mostraSenha {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     margin-bottom: 0px;
 }
 
 #senha {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     width: 150px;
     padding: 5px;
     margin: 5px auto;
@@ -46,6 +48,7 @@
     border: none;
     border-radius: 5px;
     background-color: #00ffb7;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     color: rgb(0, 0, 0);
     font-size: 14px;
     cursor: pointer;

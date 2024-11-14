@@ -34,7 +34,7 @@ const montaCard = (atleta) => {
     const imagem = document.createElement("img");
 
     nome.innerText = atleta.nome;
-    nome.style.fontFamily = "Verdana, Geneva, Tahoma, sans-serif";
+    nome.style.fontFamily = 'Georgia, Times New Roman, Times, serif';
     cartao.appendChild(nome);
 
     imagem.src = atleta.imagem;

@@ -34,7 +34,7 @@ const montaPagina = async (dados) => {
     }
 
     const nome = createAndAppend('h1', container, 'nome-content', dados.nome);
-    nome.style.fontFamily = "font-family: Verdana, Geneva, Tahoma, sans-serif";
+    nome.style.fontFamily = 'Georgia, Times New Roman, Times, serif';
     nome.style.fontSize = '24px';
 
     const card = createAndAppend('div', container, 'card');

@@ -1,7 +1,7 @@
 body {
     background-color: #454545;
     color : #d1d1d1;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 
 }
 
@@ -70,6 +70,7 @@ body {
     margin: 10px 5px;
     cursor: pointer;
     border-radius: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .botao-voltar:hover {
